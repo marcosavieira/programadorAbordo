@@ -1,11 +1,12 @@
-export const eDeMaior = idade => idade >= 18;
+export const idadeMaiorMenor = pessoas => ( 
+  pessoas.reduce(function(valorAcumulado, valorArray) {
+    const propVerificaIdade = valorArray.idade >= 18 ?
+    'maiorIdade' : 'menorIdade';
+    
+    valorAcumulado[propVerificaIdade].push(valorArray);
 
-export const agrupaPorMaiorEMenor = pessoas => (
-  pessoas.reduce(function(valorAcumulador, valorArray) {
-    const propMaiorOuMenor = valorArray.idade >= 18 ? 'maiores' : 'menores';
+    return valorAcumulado;
+  }, {maiorIdade: [], menorIdade: []})
+);
 
-    valorAcumulador[propMaiorOuMenor].push(valorArray);
 
-    return valorAcumulador;
-   }, { maiores: [], menores: []})
-)

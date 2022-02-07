@@ -1,7 +1,8 @@
-export default data => (
+export default (data) =>
   `
     <ul>
-      ${data.map(pessoa => `<li>${pessoa.nome} - ${pessoa.idade}</li>`).join('')}
+      ${data
+        .map((pessoa) => `<li>${pessoa.nome} - ${pessoa.idade}</li>`)
+        .join("")}
     </ul>
-  `
-);
+  `;

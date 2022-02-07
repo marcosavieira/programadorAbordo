@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (name => (\n  `\n    <h1>Olá mundo! Tudo bem?</h1>\n    <h2>Você está no ${name}</h2>\n    <hr />\n  `\n));\n\n\n//# sourceURL=webpack:///./js/components/HelloWorld.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (name => ( \r\n  `\r\n  <h1>Hello World!!!</h1>\r\n  <h2>Você está no ${name}</h2>\r\n  <hr />\r\n  `\r\n));\r\n\n\n//# sourceURL=webpack:///./js/components/HelloWorld.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (data => (\n  `\n    <ul>\n      ${data.map(pessoa => `<li>${pessoa.nome} - ${pessoa.idade}</li>`).join('')}\n    </ul>\n  `\n));\n\n//# sourceURL=webpack:///./js/components/List.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ((data) =>\r\n  `\r\n    <ul>\r\n      ${data\r\n        .map((pessoa) => `<li>${pessoa.nome} - ${pessoa.idade}</li>`)\r\n        .join(\"\")}\r\n    </ul>\r\n  `);\r\n\n\n//# sourceURL=webpack:///./js/components/List.js?");
 
 /***/ }),
 
@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HelloWorld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelloWorld */ \"./js/components/HelloWorld.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"HelloWorld\", function() { return _HelloWorld__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./List */ \"./js/components/List.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"List\", function() { return _List__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack:///./js/components/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HelloWorld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelloWorld */ \"./js/components/HelloWorld.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"HelloWorld\", function() { return _HelloWorld__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./List */ \"./js/components/List.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"List\", function() { return _List__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n\r\n\n\n//# sourceURL=webpack:///./js/components/index.js?");
 
 /***/ }),
 
@@ -130,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Hel
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ */ \"./js/components/index.js\");\n/* harmony import */ var _modules_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/utils */ \"./js/modules/utils.js\");\n/* harmony import */ var _mock_pessoas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mock/pessoas */ \"./js/mock/pessoas.js\");\n\n\n\n\n\n\n// console.log('eDeMaior', eMaioridade(10));\n// console.log('eDeMaior', eMaioridade(20));\n\nconst { maiores, menores } = Object(_modules_utils__WEBPACK_IMPORTED_MODULE_1__[\"agrupaPorMaiorEMenor\"])(_mock_pessoas__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\nconst html = `\n  ${_components___WEBPACK_IMPORTED_MODULE_0__[\"HelloWorld\"]('Programador a Bordo')}\n  <h3>Maiores</h3>\n  ${_components___WEBPACK_IMPORTED_MODULE_0__[\"List\"](maiores)}\n  <h3>Menores</h3>\n  ${_components___WEBPACK_IMPORTED_MODULE_0__[\"List\"](menores)}\n`\n\ndocument.querySelector('#app').innerHTML = html;\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components */ \"./js/components/index.js\");\n/* harmony import */ var _mock_pessoas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mock/pessoas */ \"./js/mock/pessoas.js\");\n/* harmony import */ var _modules_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/utils */ \"./js/modules/utils.js\");\n\r\n\r\n\r\n\r\nconst { maiorIdade, menorIdade} = Object(_modules_utils__WEBPACK_IMPORTED_MODULE_2__[\"idadeMaiorMenor\"])(_mock_pessoas__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\r\n\r\nconst renderHtml = `${Object(_components__WEBPACK_IMPORTED_MODULE_0__[\"HelloWorld\"])('Programador Devmarcosav')}\r\n  \r\n  <h3>Maiores</h3>\r\n  ${Object(_components__WEBPACK_IMPORTED_MODULE_0__[\"List\"])(maiorIdade)}\r\n  <h3>Menores</h3>\r\n  ${Object(_components__WEBPACK_IMPORTED_MODULE_0__[\"List\"])(menorIdade)}\r\n`\r\ndocument.querySelector('#app').innerHTML = renderHtml;\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
@@ -142,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst pessoas = [\n  {\n    nome: 'Ayrton',\n    idade: 27\n  },\n  {\n    nome: 'João',\n    idade: 14\n  },\n  {\n    nome: 'Maria',\n    idade: 23\n  },\n  {\n    nome: 'Joana',\n    idade: 21\n  },\n  {\n    nome: 'Lucas',\n    idade: 32\n  },\n  {\n    nome: 'Mateus',\n    idade: 15\n  },\n  {\n    nome: 'Isa',\n    idade: 23\n  },\n  {\n    nome: 'Luiza',\n    idade: 17\n  }\n]\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (pessoas);\n\n//# sourceURL=webpack:///./js/mock/pessoas.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst pessoas = [\r\n  {\r\n    nome: 'Marcos',\r\n    idade: 32\r\n  },\r\n  {\r\n    nome: 'Pâmela',\r\n    idade: 26\r\n  },\r\n  {\r\n    nome: 'Kaique',\r\n    idade: 14\r\n  },\r\n  {\r\n    nome: 'Ryan',\r\n    idade: 12\r\n  },\r\n  {\r\n    nome: 'Brenno',\r\n    idade: 7\r\n  }\r\n]\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (pessoas);\n\n//# sourceURL=webpack:///./js/mock/pessoas.js?");
 
 /***/ }),
 
@@ -150,11 +150,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst pessoas = [\n  {\n    n
 /*!*****************************!*\
   !*** ./js/modules/utils.js ***!
   \*****************************/
-/*! exports provided: eDeMaior, agrupaPorMaiorEMenor */
+/*! exports provided: idadeMaiorMenor */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"eDeMaior\", function() { return eDeMaior; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"agrupaPorMaiorEMenor\", function() { return agrupaPorMaiorEMenor; });\nconst eDeMaior = idade => idade >= 18;\n\nconst agrupaPorMaiorEMenor = pessoas => (\n  pessoas.reduce(function(valorAcumulador, valorArray) {\n    const propMaiorOuMenor = valorArray.idade >= 18 ? 'maiores' : 'menores';\n\n    valorAcumulador[propMaiorOuMenor].push(valorArray);\n\n    return valorAcumulador;\n   }, { maiores: [], menores: []})\n)\n\n//# sourceURL=webpack:///./js/modules/utils.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"idadeMaiorMenor\", function() { return idadeMaiorMenor; });\nconst idadeMaiorMenor = pessoas => ( \r\n  pessoas.reduce(function(valorAcumulado, valorArray) {\r\n    const propVerificaIdade = valorArray.idade >= 18 ?\r\n    'maiorIdade' : 'menorIdade';\r\n    \r\n    valorAcumulado[propVerificaIdade].push(valorArray);\r\n\r\n    return valorAcumulado;\r\n  }, {maiorIdade: [], menorIdade: []})\r\n);\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./js/modules/utils.js?");
 
 /***/ })
 

@@ -1,36 +1,23 @@
 const pessoas = [
   {
-    nome: 'Ayrton',
-    idade: 27
-  },
-  {
-    nome: 'João',
-    idade: 14
-  },
-  {
-    nome: 'Maria',
-    idade: 23
-  },
-  {
-    nome: 'Joana',
-    idade: 21
-  },
-  {
-    nome: 'Lucas',
+    nome: 'Marcos',
     idade: 32
   },
   {
-    nome: 'Mateus',
-    idade: 15
+    nome: 'Pâmela',
+    idade: 26
   },
   {
-    nome: 'Isa',
-    idade: 23
+    nome: 'Kaique',
+    idade: 14
   },
   {
-    nome: 'Luiza',
-    idade: 17
+    nome: 'Ryan',
+    idade: 12
+  },
+  {
+    nome: 'Brenno',
+    idade: 7
   }
 ]
-
 export default pessoas;

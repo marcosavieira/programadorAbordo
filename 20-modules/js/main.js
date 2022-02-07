@@ -1,22 +1,16 @@
-import * as Components from './components/'
+import { HelloWorld, List } from "./components";
+import pessoas from "./mock/pessoas";
+import { idadeMaiorMenor } from './modules/utils'
 
-import { agrupaPorMaiorEMenor, eDeMaior as eMaioridade } from './modules/utils';
+const { maiorIdade, menorIdade} = idadeMaiorMenor(pessoas);
 
-import pessoasMock from './mock/pessoas';
-
-// console.log('eDeMaior', eMaioridade(10));
-// console.log('eDeMaior', eMaioridade(20));
-
-const { maiores, menores } = agrupaPorMaiorEMenor(pessoasMock);
-
-const html = `
-  ${Components.HelloWorld('Programador a Bordo')}
+const renderHtml = `${HelloWorld('Programador Devmarcosav')}
+  
   <h3>Maiores</h3>
-  ${Components.List(maiores)}
+  ${List(maiorIdade)}
   <h3>Menores</h3>
-  ${Components.List(menores)}
+  ${List(menorIdade)}
 `
-
-document.querySelector('#app').innerHTML = html;
+document.querySelector('#app').innerHTML = renderHtml;
 
 
